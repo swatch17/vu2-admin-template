@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions ,mapMutations} from 'vuex';
+import { mapGetters, mapActions, mapMutations } from 'vuex';
 
 export default {
   name: 'Home',
@@ -15,16 +15,17 @@ export default {
     return {};
   },
   mounted() {
-    console.log(this)
-    console.log(this.$store.getters)
+    console.log(import.meta);
+    console.log(import.meta.env);
+    console.log(this.$store.getters);
   },
   computed: {
-    ...mapGetters('counter',['count'])
+    ...mapGetters('counter', ['count']),
   },
   methods: {
-    ...mapMutations('counter',['increment']),
+    ...mapMutations('counter', ['increment']),
     add() {
-      this.increment()
+      this.increment();
     },
   },
 };
