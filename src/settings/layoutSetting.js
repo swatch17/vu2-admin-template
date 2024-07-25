@@ -1,0 +1,4 @@
+export const LAYOUT_SIDER_COLLAPSED_WIDTH = 48;
+export const LAYOUT_SIDER_WIDTH = 210;
+export const LAYOUT_HEADER_HEIGHT = 96;
+export const LAYOUT_HEADER_TABS_HEIGHT = 36;

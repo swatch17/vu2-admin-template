@@ -1,14 +1,21 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import Layout from '@/layouts/index.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import('@/views/home/index.vue'),
-    meta: {
-      title: '主页',
-    },
+
+    component: Layout,
+    children: [
+      {
+        path: '/',
+        component: () => import('@/views/home/index.vue'),
+        meta: {
+          title: '首页',
+        },
+      },
+    ],
   },
   {
     path: '/about',
