@@ -1,7 +1,7 @@
 <template>
   <div @click="toggleSideBar">
     <!-- 折叠 -->
-    <i :class="icon" />
+    <i :class="icon" class="hover" />
     <!-- 展开 -->
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
     return {};
   },
   computed: {
-    ...mapGetters('app',['collapsed']),
+    ...mapGetters('app', ['collapsed']),
     icon() {
       return this?.collapsed ? 'el-icon-s-unfold' : 'el-icon-s-fold';
     },
@@ -22,8 +22,14 @@ export default {
   methods: {
     ...mapActions('app', ['handleSiderBar']),
     toggleSideBar() {
-      this.handleSiderBar(!this.collapsed)
+      this.handleSiderBar(!this.collapsed);
     },
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.hover {
+  cursor: pointer;
+}
+</style>

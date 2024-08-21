@@ -5,7 +5,6 @@ import Layout from '@/layouts/index.vue';
 const routes = [
   {
     path: '/',
-
     component: Layout,
     children: [
       {
@@ -19,9 +18,25 @@ const routes = [
   },
   {
     path: '/about',
-    name: 'About',
-    component: () => import('@/views/about/index.vue'),
-    meta: { title: '关于' },
+    component: Layout,
+    name:'关于',
+    meta: { title: '关于-1' },
+    children: [
+      {
+        path: '',
+        name: 'About',
+        component: () => import('@/views/about/index.vue'),
+        meta: { title: '关于-2' },
+        children: [
+          {
+            path: 'detail',
+            name: 'AboutDetail',
+            component: () => import('@/views/about/detail/index.vue'),
+            meta: { title: '关于详情-3' },
+          },
+        ],
+      },
+    ],
   },
 ];
 

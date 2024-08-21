@@ -63,3 +63,5 @@ const getMatch = (menus, parent) => {
   });
   return matched;
 };
+
+export { findPath, getAllParentPath, getMatch };

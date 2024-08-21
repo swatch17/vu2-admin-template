@@ -12,7 +12,6 @@ import FullScreen from '@/images/icons/fullscreen.svg'
 import FullScreenExit from '@/images/icons/fullscreen-exit.svg'
 
 const { toggle, isFullscreen } = useFullscreen();
-console.log(useFullscreen())
 
 export default {
   data() {
@@ -20,7 +19,6 @@ export default {
   },
   computed: {
     content() {
-      console.log(isFullscreen)
       return isFullscreen.value ? '退出全屏' : '全屏';
     },
     icon(){

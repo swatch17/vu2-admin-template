@@ -1,7 +1,7 @@
 <template>
   <el-container style="height: 100vh">
     <layout-sider />
-    <div>
+    <div style="width: 100%">
       <layout-header />
       <div class="h-12"></div>
       <layout-main />
